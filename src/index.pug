@@ -1,0 +1,117 @@
+//- include includes/mixins.pug
+
+doctype html
+html(lang='ru')
+
+	include includes/head.pug
+
+	body
+		
+		#mobile-indicator
+		main.tournament
+			.container
+				h1 Чемпионат мира по футболу<span>Россия&nbsp;2018</span>
+				.slider-arrows
+					.slider-prev.slider-arrow назад
+					.slider-next.slider-arrow далее				
+				.slider-wrapper 
+					.block.quarter-final.swiper-slide
+						h2 1/4 финала
+						.block-wrap
+							.block-group
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/uruguay.png", alt="")
+									.block-group-team-name Уругвай
+									.block-group-team-result 0
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/france.png", alt="")
+									.block-group-team-name Франция
+									.block-group-team-result 2
+							.block-group
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/brazil.png", alt="")
+									.block-group-team-name Бразилия
+									.block-group-team-result 1
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/belgium.png", alt="")
+									.block-group-team-name Бельгия
+									.block-group-team-result 2
+							.block-group
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/sweden.png", alt="")
+									.block-group-team-name Швеция
+									.block-group-team-result 0
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/england.png", alt="")
+									.block-group-team-name Англия
+									.block-group-team-result 2
+							.block-group
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/russian.png", alt="")
+									.block-group-team-name Россия
+									.block-group-team-result 3
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/croatia.png", alt="")
+									.block-group-team-name Хорватия
+									.block-group-team-result 4
+					.block.semi-final.swiper-slide
+						h2 1/2 финала
+						.block-wrap
+							.block-group
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/france.png", alt="")
+									.block-group-team-name Франция
+									.block-group-team-result 1
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/belgium.png", alt="")
+									.block-group-team-name Бельгия
+									.block-group-team-result 0
+							.block-group
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/england.png", alt="")
+									.block-group-team-name Англия
+									.block-group-team-result 1
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/croatia.png", alt="")
+									.block-group-team-name Хорватия
+									.block-group-team-result 2			
+					.block.final.swiper-slide
+						h2 финал
+						.block-wrap
+							.block-group
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/france.png", alt="")
+									.block-group-team-name Франция
+									.block-group-team-result 4
+								.block-group-team
+									.block-group-team-flag
+										img(src="images/croatia.png", alt="")
+									.block-group-team-name Хорватия
+									.block-group-team-result 2
+					.block.winner.swiper-slide
+						h2 победитель
+						.block-wrap
+							.block-group
+								.block-group-team
+									.block-group-team-cup
+										img(src="images/cup.png", alt="")
+									.block-group-team-flag
+										img(src="images/france.png", alt="")
+									.block-group-team-name Франция
+		
+		script(src="libs/jquery-3.6.0.min.js")
+		script(src="libs/slick/slick.min.js")
+		script(src="js/scripts.js")

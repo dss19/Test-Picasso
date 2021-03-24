@@ -1,0 +1,183 @@
+.tournament
+	display: block
+	width: 100%
+	min-height: 100vh
+	height: 100%
+	background-image: url('../images/bg.jpg') 
+	background-color: #286dbb
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	padding: 22px 0
+	h1 
+		margin: 0 0 40px
+		text-align: center
+		color: $white
+		font-size: 50px
+		text-transform: uppercase
+		span
+			display: block 
+			font-size: 50px
+			color: red
+			margin: 0
+	h2
+		font-size: 36px
+		text-transform: uppercase
+		text-align: center
+		margin: 0 0 30px
+	.slick-track
+		display: flex
+	.slick-list
+		padding-bottom: 10px	
+	.slick-slide
+		height: auto
+	.slick-initialized .slick-slide
+		display: flex	
+
+.block
+	width: 25%
+	height: auto
+	display: flex
+	flex-direction: column
+	&-wrap
+		flex: 1
+		display: flex
+		flex-direction: column
+		justify-content: center
+	&-group
+		position: relative
+		margin-bottom: 80px
+		&:last-of-type
+			margin-bottom: 0			
+		&-team
+			position: relative
+			width: 90%
+			height: 46px
+			display: flex
+			align-items: center
+			background-color: #050a38
+			font-size: 26px
+			border-radius: 24px	
+			margin: 0 auto
+			&:nth-of-type(2)
+				margin-top: 40px
+			&-cup
+				position: absolute
+				bottom: calc(100% + 10px)
+				left: 50%
+				transform: translateX(-50%)
+				width: 50px					
+			&-flag
+				position: absolute
+				left: -5px
+				top: 50%
+				transform: translateY(-50%)
+				width: 60px
+				height: 60px
+				border-radius: 50%
+				border: 5px solid $white
+				overflow: hidden
+				img
+					object-position: center center
+					height: 100%
+			&-name
+				width: 100%
+				text-align: center
+				text-transform: uppercase			
+			&-result
+				position: absolute
+				display: flex
+				align-items: center
+				justify-content: center
+				right: -5px
+				top: 50%
+				transform: translateY(-50%)
+				width: 60px
+				height: 60px
+				border-radius: 50%
+				border: 5px solid $white
+				overflow: hidden
+				background-color: red
+.slider-arrows
+	display: none
+.slider-arrow	
+	text-align: center
+	background-color: #050a38
+	border-radius: 16px
+	text-transform: uppercase
+	padding: 5px 8px
+	transition: .2s	
+	cursor: pointer
+	&.slick-disabled
+		opacity: 0.2	
+
+.semi-final
+	.block-group:first-of-type
+		margin-bottom: 290px
+
+@media screen and ( max-width: 1399px )
+	.tournament
+		h1 
+			font-size: 36px
+			span 
+				font-size: 36px
+		h2
+			font-size: 24px		
+	.block
+		&-group
+			margin-bottom: 40px
+			&-team
+				font-size: 20px
+				height: 40px
+				&:nth-of-type(2)
+					margin-top: 20px
+				&-flag,
+				&-result
+					width: 50px
+					height: 50px
+	.semi-final
+		.block-group:first-of-type
+			margin-bottom: 172px
+@media screen and ( max-width: 1199px )
+	.tournament
+		h2
+			font-size: 20px		
+	.block
+		&-group
+			&-team
+				font-size: 16px
+				height: 34px
+				&-flag,
+				&-result
+					width: 40px
+					height: 40px
+					border: 2px solid $white
+@media screen and ( max-width: 767px )
+	.tournament
+		h1
+			font-size: 22px
+			margin-bottom: 10px
+			span
+				font-size: 20px	
+		h2 
+			font-size: 18px
+			margin-bottom: 16px						
+	.slider-arrows
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 10px
+	.block
+		&-group
+			margin-bottom: 30px
+			&-team:nth-of-type(2)				
+				margin-top: 12px
+	.semi-final
+		.block-group:first-of-type
+			margin-bottom: 90px					
+@media screen and ( max-width: 575px )
+	.tournament
+		padding: 15px 0 10px
+	.semi-final
+		.block-group:first-of-type
+			margin-bottom: 50px
